@@ -14,9 +14,9 @@ public:
         int i=0;
         for( char &ch:s){
             
-            int increaseBy=(ch-'a'+v[i++])%26;
-			increaseBy=(increaseBy+26)%26;
-			ch='a'+increaseBy;
+            int shift=(ch-'a'+v[i++])%26;
+			shift=(shift+26)%26;
+			ch='a'+shift;
         }
         
         return s;
