@@ -27,8 +27,7 @@ public:
     
     vector<int> distanceK(TreeNode* root, TreeNode* target, int K) {
         
-        if(K==0)
-            return {target->val};
+        if(K==0) return {target->val};
         
         //initialisation 
         
@@ -54,8 +53,7 @@ public:
                 visited[curr]=true;
                 
                 for(int x : graph[curr])
-                    if(!visited[x])
-                        q.push(x);
+                    if(!visited[x]) q.push(x);
             }
             cnt++;
             //we reached the Kth layer, push the layer in res vector and break bfs
@@ -64,7 +62,7 @@ public:
                     res.push_back(q.front());
                     q.pop();
                 }
-                break;
+                return res;
             }
                 
         }
