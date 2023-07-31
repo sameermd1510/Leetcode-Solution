@@ -15,7 +15,6 @@ public:
         for( int l=2;l<=n;l++){
             for( int st=0;st+l<n;st++){
                 int e=l+st;
-                //dp[st][e]=l+1;
                 for( int k=st;k<e;k++){
                     dp[st][e]=min( dp[st][e]  ,  dp[st][k]+dp[k+1][e]-(s[st]==s[e]));
                 }
