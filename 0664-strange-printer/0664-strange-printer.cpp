@@ -1,7 +1,7 @@
 class Solution {
 public:
     int strangePrinter(string s) {
-        //s.erase(unique(s.begin(),s.end()),s.end());
+        s.erase(unique(s.begin(),s.end()),s.end());
         
         int n=s.size();
         vector< vector< int>> dp( n, vector< int> (n,n));
