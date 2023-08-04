@@ -113,14 +113,10 @@ class Solution {
         
         unordered_map<int,vector<int>> graph;
         unordered_map<int,bool> visited;
-        vector<int> res;
         queue<pair<int,int>> q;
-        int cnt = 0;
         
         //build the graph
         buildGraph(root,graph);
-        
-        //push the target to start bfs with
         q.push({target,0});
         
         //bfs
@@ -130,7 +126,8 @@ class Solution {
             int curr=t.first;
             int vl=t.second;
             visited[curr]=true;
-            ans=max(ans,vl);   
+            ans=max(ans,vl);
+            
             for(int x : graph[curr])
                 if(!visited[x]) q.push({x,vl+1});
                 
