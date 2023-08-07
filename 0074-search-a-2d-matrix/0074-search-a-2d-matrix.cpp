@@ -1,6 +1,6 @@
 class Solution {
 public:
-    bool searchMatrix(vector<vector<int>>& m, int t) 
+    /*bool searchMatrix(vector<vector<int>>& m, int t) 
     {
         int r=m.size(),c=m[0].size();
         for(int i=0;i<r;i++)
@@ -12,6 +12,18 @@ public:
                 else return false;
             }
             else if(m[i][0] >t) return false;
+        }
+        return false;
+    }*/
+    bool searchMatrix(vector<vector<int>>& m, int t) 
+    {
+        int r=m.size(),c=m[0].size();
+        
+        int R=0,C=c-1;
+        while(R<r && C>=0){
+            if(m[R][C]==t) return true;
+            else if(m[R][C] > t) C--;
+            else R++;
         }
         return false;
     }
