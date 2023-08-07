@@ -11,6 +11,7 @@ public:
                 if(it!=m[i].end() && *it==t) return true;
                 else return false;
             }
+            else if(m[i][0] >t) return false;
         }
         return false;
     }
