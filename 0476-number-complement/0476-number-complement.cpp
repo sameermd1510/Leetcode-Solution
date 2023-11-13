@@ -1,7 +1,6 @@
 class Solution {
 public:
     int findComplement(int n) {
-        int l=log2(n)+1;
         
         int ans=0,f=0;
         while( n!=0){
