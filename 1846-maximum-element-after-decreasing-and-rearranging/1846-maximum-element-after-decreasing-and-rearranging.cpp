@@ -6,16 +6,14 @@ public:
         sort(a.begin(),a.end());
         
         a[0]=1;
+        int x=a[0];
         for( int i=1;i<n;i++){
-            if(abs(a[i]-a[i-1])<=1) continue;
-            else{
+            if(abs(a[i]-a[i-1])>1) {
                 a[i]=a[i-1]+1;
             }
+            x=max(x,a[i]);
         }
-        // for( int x:a) cout<<x<<" ";
-        // cout<<"\n";
-        
-        return *max_element(a.begin(),a.end());
+        return x;
         
         
     }
