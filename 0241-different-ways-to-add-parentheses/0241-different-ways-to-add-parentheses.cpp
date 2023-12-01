@@ -40,7 +40,7 @@ public:
 		}
 		// if the input string contains only number
 		if (result.empty())
-			result.push_back(atoi(input.c_str()));
+			result.push_back(stoi(input));
 		// save to dpMap
 		dpMap[input] = result;
 		return result;
