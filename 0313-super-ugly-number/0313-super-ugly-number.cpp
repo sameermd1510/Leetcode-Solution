@@ -16,7 +16,7 @@ public:
             for(int k=0;k<N;k++){
                 pq.push(dp[j]*primes[k]);
             }
-            while(pq.top()<=dp[j]){
+            while(pq.top()==dp[j]){
                 pq.pop();
             }
             dp[i]=pq.top();
