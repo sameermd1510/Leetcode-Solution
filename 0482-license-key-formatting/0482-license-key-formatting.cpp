@@ -4,9 +4,10 @@ public:
         string ans="";
         
         int cnt=0;
-        reverse(s.begin(), s.end());
         
-        for( char ch:s){
+        
+        for( int i=s.size()-1;i>=0;i--){
+            char ch=s[i];
             if( (ch>='a' && ch<='z' ) || ( ch >='A' && ch<='Z') ) ch= ch & ~32;
                 
             if( ch!='-' && cnt++ <k){
