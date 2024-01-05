@@ -12,7 +12,7 @@ public:
     
     bool search(string word) {
         
-        if(m.find(word)!=m.end()) return true;  
+        if(m.find(word)!=m.end()) return true;
         string s=word;
         for( int i=0;i<s.size();i++){
             if(s[i]=='.'){
