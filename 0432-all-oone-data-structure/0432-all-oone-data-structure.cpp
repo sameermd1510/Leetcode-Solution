@@ -21,10 +21,7 @@ public:
     
     void dec(string key) {
         
-        if(m.find(key)!=m.end()){
-            s.erase({m[key], key});            
-        }
-        
+        s.erase({m[key], key});            
         if(m[key]==1) m.erase(key);
         else {
             m[key]--;
