@@ -2,8 +2,8 @@ class AllOne {
 public:
     
     unordered_map< string , int> m;
-    
     set< pair<int,string> > s;
+    
     AllOne() {
         
     }
@@ -13,7 +13,6 @@ public:
         if(m.find(key)!=m.end()){
             s.erase({m[key], key});            
         }
-        
         m[key]++;
         s.insert({m[key] , key});
         
@@ -30,24 +29,11 @@ public:
     }
     
     string getMaxKey() {
-        
-        // for( auto t:s){
-        //     cout<<t.second<<" "<<t.first<<" ";
-        // }
-        // cout<<"\n";
-        if(s.size())
-        return s.rbegin()->second;
-        else return "";
+        return(s.size())? s.rbegin()->second :"";
     }
     
     string getMinKey() {
-        
-        // for( auto t:s){
-        //     cout<<t.second<<" "<<t.first<<" ";
-        // }
-        // cout<<"\n";
-        if(s.size()) return s.begin()->second;
-        else return "";
+        return(s.size())? s.begin()->second :"";
     }
 };
 
