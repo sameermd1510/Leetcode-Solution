@@ -47,9 +47,9 @@ public:
                     if(new_time%2==0){
                         new_time++;
                     }
-                    if(new_time==1){
-                        new_time=3;
-                    }
+                    // if(new_time==1){
+                    //     new_time=3;
+                    // }
                     new_time+=t;
                     
                     dp[cx][cy]=new_time;
